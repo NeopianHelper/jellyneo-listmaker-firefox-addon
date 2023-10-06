@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Jellyneo item list maker",
+  "version": "1.0",
+  "description": "Creates a list of items from JellyNeo searches and prints them to a downloadable text file",
+  "icons": {
+    "48": "jn_icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "https://items.jellyneo.net/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://items.jellyneo.net/search/print*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
